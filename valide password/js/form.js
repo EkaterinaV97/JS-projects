@@ -2,8 +2,9 @@
 
 export function isPasswordValid(password) {
   console.log(password)
-	if (password.length >= 10) {
-    return true
+  let pass = password.trim();
+	if (pass.length >= 10) {
+    return true;
   }
-  return false
+  return false;
 }
