@@ -28,9 +28,10 @@ export default class Passport {
    }
 
    getIsValidName() {
-     if (this.lastName.endsWith('.')) {
-       return "No"
+     if (this.firstName.length > 0 && this.lastName.length > 0 && this.lastName.endsWith('.') === false) {
+       return "Yes";
+     } else {
+       return "No";
      }
-     return "Yes"
-   }
+}
 }
