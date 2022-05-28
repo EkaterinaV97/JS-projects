@@ -2,17 +2,18 @@
 
 export default class Weather {
     /** @param {object} details */
-    getLocation(data) {
-        console.log(`${data.location.name}, ${data.location.country}`);
-        return `${data.location.name}, ${data.location.country}`
+    constructor(details) {
+        this.details = details;
+    }
+    getLocation() {
+        return `${this.details.location.name}, ${this.details.location.country}`;
     }
 
     getIcon() {
-        return data.current.weather_icons
+        return this.details.current.weather_icons[0];
     }
 
     getTemperature() {
-
-    }
-   
+        return `${this.details.current.temperature}&deg;C`;
+    }   
   }
