@@ -26,5 +26,5 @@ export default class Tasks {
   getUnformattedTasks() {
     return this.tasks.join(', ').toLowerCase();
   }
-
+  
 }
