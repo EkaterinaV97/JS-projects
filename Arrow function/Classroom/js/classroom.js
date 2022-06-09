@@ -36,11 +36,8 @@ export const getNumberOfGrades = grades => {
   
   /** @param {number[]} grades */
   export const getRaisedGrades = grades => {
-    let sum = 1;
-    grades.forEach(function(grade) {
-      sum = sum + grade;
+    let plus = grades.map(i => i + 1);
+    return plus.filter((grade) => {
+      return grade <= 20;
     })
-    if (sum <= 20) {
-      return sum;
-    }
   }
