@@ -1,8 +1,8 @@
-function setClocks() {
-    let clock = new Clock();
-    let hours = clock.getHours();
-    let minutes = clock.getMinutes();
-    let seconds = clock.getSeconds();
+ function setClocks() {
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
     let session = "AM";
 
     if(hours > 12) {
@@ -14,20 +14,14 @@ function setClocks() {
         hours = 12;
     };
 
-    if(hours < 10) {
-        "0" + hours;
-    } else hours;
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    if(minutes < 10) {
-        "0" + minutes;
-    } else minutes;
-
-    if(seconds < 10) {
-        "0" + seconds;
-    } else seconds;
-
-    let time = hours + ":" + minutes + ":" + seconds + session;
+    let time = hours + ":" + minutes + ":" + seconds + " " + session;
     document.getElementById("clocks").innerText = time;
-    document.getElementById("clocks").textContent = time;
-    setTimeout(setClocks, 1000);
+    document.getElementById("clocks").textContent = time; 
+    setTimeout(setClocks, 1000); 
 }
+setClocks();
+
