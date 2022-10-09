@@ -3,11 +3,26 @@ body {
 }
 
 .clocks {
-    position: absolute;
-    top: 50%;
-    left: 40%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
     color: aqua;
     letter-spacing: 6px;
+}
+
+.sec-timer h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: aqua;
+    letter-spacing: 6px;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: aqua;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    background-color: rgb(240, 11, 190);
 }

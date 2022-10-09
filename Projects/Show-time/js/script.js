@@ -1,3 +1,5 @@
+/*  Show time now */
+ 
  function setClocks() {
     let date = new Date();
     let hours = date.getHours();
@@ -24,4 +26,7 @@
     setTimeout(setClocks, 1000); 
 }
 setClocks();
+
+
+/* Sec-timer */
 
